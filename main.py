@@ -24,9 +24,7 @@ def parenthesis_balanced(data):
     for i in data:
         balance = False
         if i not in open and i not in close: continue
-        # elif i == '(' or i == '[' or i == '{': s.push(i)
         elif i in open: s.push(i)
-        # elif (i == ')' or i == ']' or i == '}') and (s.is_empty() is False):
         elif i in close and (s.is_empty() is False):
             if (i == ')' and s.peek() == '(') or (i == ']' and s.peek() == '[') or (i == '}' and s.peek() == '{'):
                 s.pop()
